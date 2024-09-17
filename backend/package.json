@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "a basic app to deploy",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
   "keywords": [
     "node",
@@ -13,8 +14,10 @@
   "author": "sanjay",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.21.0",
-    "gh-pages": "^6.1.1"
+    "gh-pages": "^6.1.1",
+    "nodemon": "^3.1.4"
   }
 }
