@@ -1,9 +1,13 @@
 import dotenv from 'dotenv';
-dotenv.config();
+dotenv.config({path:'./.env'});
 import cors from 'cors';
 import express from 'express';
-const app =express();
+export const app =express();
 const port =process.env.PORT||4000;
+import {dbconnection} from '../db/dbConnection.js';
+
+
+dbconnection();
 
 //set cors for app and allow only the loac; host 5173
 app.use(cors({origin:'http://localhost:5173'}));
